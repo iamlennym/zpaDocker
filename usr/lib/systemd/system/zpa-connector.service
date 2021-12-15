@@ -1,0 +1,17 @@
+[Unit]
+Description=Zscaler Private Access Connector
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+User=root
+Group=root
+LimitNOFILE=512000
+WorkingDirectory=/opt/zscaler/var
+StandardError=syslog
+StandardOutput=syslog
+ExecStart=/opt/zscaler/bin/zpa-connector
+
+[Install]
+WantedBy=multi-user.target

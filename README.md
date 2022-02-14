@@ -10,9 +10,6 @@ Note : As running ZPA connector in a docker container is not officially supporte
 ## Steps Required ##
 
 * Clone the repository onto your Mac / Linux machine (e.g. `git clone https://github.com/iamlennym/zpaDocker.git`).
-* Copy the provisioning key for the app connector as per https://help.zscaler.com/zpa/about-connectorprovisioningwizard#choosekey.
-* Store the provisioning key for the app connector in the file called `provision_key`.
-
 * Build the local_zscaler_zpa docker image:
     - Execute the following commands:
         - `./build.sh` (builds a local docker image for local_zscaler_zpa)
@@ -25,7 +22,8 @@ Note : As running ZPA connector in a docker container is not officially supporte
             local_zscaler_zpa      latest    3decee17090f   5 hours ago   277MB
             ```
 
-
+* Copy the provisioning key for the app connector as per https://help.zscaler.com/zpa/about-connectorprovisioningwizard#choosekey.
+* Store the provisioning key for the app connector in the file called `provision_key`.
 
 * Spin-up the ZPA connector inside a docker container.
     - Execute the following command:
